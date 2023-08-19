@@ -17,6 +17,7 @@
 <!-- Template Base Scripts End -->
 <!-- Page Specific Scripts Start -->
 @stack('js_page')
+<script src="/js/components/toasts.js"></script>
 <script src="/js/common.js"></script>
 <script src="/js/scripts.js"></script>
 <!-- Page Specific Scripts End -->

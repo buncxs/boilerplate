@@ -26,7 +26,8 @@
     <div class="user-container d-flex">
         <a href="#" class="d-flex user position-relative" data-bs-toggle="dropdown" aria-haspopup="true"
             aria-expanded="false">
-            <img class="profile" alt="profile" src="{{ isset(Auth::user()->profile_photo_path) ? Storage::url(Auth::user()->profile_photo_path) : Storage::url('img/profile/no_image.webp') }}" />
+            <img class="profile" alt="profile"
+                src="{{ isset(Auth::user()->profile_photo_path) ? Storage::url(Auth::user()->profile_photo_path) : Storage::url('img/profile/no_image.jpg') }}" />
             <div class="name">{{ Auth::user()->name }}</div>
         </a>
         <div class="dropdown-menu dropdown-menu-end user-menu wide">

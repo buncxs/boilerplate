@@ -15,16 +15,18 @@
         <script src="/js/cs/scrollspy.js"></script>
         <script src="/js/vendor/dropzone.min.js"></script>
         <script src="/js/vendor/singleimageupload.js"></script>
+        <script src="/js/vendor/jquery.validate/jquery.validate.min.js"></script>
+        <script src="/js/vendor/jquery.validate/additional-methods.min.js"></script>
     @endpush
 
     @push('js_page')
         <script src="/js/cs/dropzone.templates.js"></script>
         <script src="/js/forms/controls.dropzone.js"></script>
+        <script src="/js/pages/auth.editprofile.js"></script>
     @endpush
 
     <div class="container">
         <div class="row">
-
             <div class="col">
                 <!-- Title and Top Buttons Start -->
                 <div class="page-title-container">
@@ -39,69 +41,26 @@
                 </div>
                 <!-- Title and Top Buttons End -->
 
-                <!-- Public Info Start -->
+                <!-- Profile Info Start -->
                 @include('profile.partials.update-profile-information-form')
-                <!-- Public Info End -->
+                <!-- Profile Info End -->
 
-                <!-- Contact Start -->
-                <h2 class="small-title">Password</h2>
-                <div class="card mb-5">
-                    <div class="card-body">
-                        <form>
-                            <div class="mb-3 row">
-                                <label class="col-lg-2 col-md-3 col-sm-4 col-form-label">Primary Email</label>
-                                <div class="col-sm-8 col-md-9 col-lg-10">
-                                    <input type="email" class="form-control" value="me@lisajackson.com" disabled />
-                                </div>
-                            </div>
-                            <div class="mb-3 row">
-                                <label class="col-lg-2 col-md-3 col-sm-4 col-form-label">Secondary Email</label>
-                                <div class="col-sm-8 col-md-9 col-lg-10">
-                                    <input type="email" class="form-control" value="lisajackson@gmail.com" />
-                                </div>
-                            </div>
-                            <div class="mb-3 row">
-                                <label class="col-lg-2 col-md-3 col-sm-4 col-form-label">Phone</label>
-                                <div class="col-sm-8 col-md-9 col-lg-10">
-                                    <input type="text" class="form-control" value="+6443884455" />
-                                </div>
-                            </div>
-                            <div class="mb-3 row mt-5">
-                                <div class="col-sm-8 col-md-9 col-lg-10 ms-auto">
-                                    <button type="submit" class="btn btn-outline-primary">Update</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+                <!-- Password Start -->
+                @include('profile.partials.update-password-form')
                 <!-- Contact End -->
-
-                <!-- Jobs Start -->
-                <h2 class="small-title">Delete</h2>
-                <div class="card mb-5">
-                    <div class="card-body">
-                        <form>
-                            <div class="mb-3 row">
-                                <label class="col-lg-2 col-md-3 col-sm-4 col-form-label">Freelance</label>
-                                <div class="col-sm-8 col-md-9 col-lg-10">
-                                    <div class="form-check mt-2">
-                                        <input type="checkbox" class="form-check-input" id="customCheck1" />
-                                        <label class="form-check-label" for="customCheck1">I am available for
-                                            hire</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mb-3 row mt-5">
-                                <div class="col-sm-8 col-md-9 col-lg-10 ms-auto">
-                                    <button type="submit" class="btn btn-outline-primary">Update</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <!-- Jobs End -->
             </div>
         </div>
     </div>
-
+    @if (Session::has('status'))
+        <!-- Live Start -->
+        <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true" id="toast">
+            <div class="toast-header">
+                <strong class="me-auto">Bootstrap</strong>
+                <small>11 mins ago</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">Hello, world! This is a toast message.</div>
+        </div>
+        <!-- Live End -->
+    @endif
 </x-app-layout>
