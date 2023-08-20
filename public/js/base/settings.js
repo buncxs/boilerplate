@@ -37,7 +37,7 @@ class Settings {
         color: 'light-blue',
         navcolor: 'default',
       },
-      storagePrefix: 'acorn-standard-',
+      storagePrefix: 'acorn-classic-dashboard-',
       showSettings: true,
       carryParams: false,
     };

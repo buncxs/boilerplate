@@ -22,4 +22,5 @@ class ProfileUpdateRequest extends FormRequest
             'profile_photo_path' => ['nullable', 'mimes:jpg,jpeg,png,webp', 'max:1024'],
         ];
     }
+
 }

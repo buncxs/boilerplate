@@ -65,3 +65,14 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 "# boilerplate" 
+
+
+  1.- Clone the project "git clone git@github.com:buncxs/boilerplate.git"
+  2.- Install Composer Dependencies "composer install"
+  3.- Install NPM Dependencies "npm install"
+  4.- Create a copy of your .env file "cp .env.example .env"
+  5.- Generate an app encryption key "php artisan key:generate"
+  6.- Create an empty database for our application
+  7.- In the .env file, add database information to allow Laravel to connect to the database
+  8.- Migrate the database and seed "php artisan migrate --seed"
+  9.- Change the FILESYSTEM_DISK to public in the env file.

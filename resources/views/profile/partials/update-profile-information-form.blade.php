@@ -60,7 +60,7 @@
                     <label class="col-lg-2 col-md-3 col-sm-4 col-form-label">Photo</label>
                     <div class="col-sm-8 col-md-9 col-lg-10">
                         <div class="position-relative d-inline-block" id="singleImageUploadExample">
-                            <img src="{{ isset($user->profile_photo_path) ? Storage::url($user->profile_photo_path) : Storage::url('img/profile/no_image.jpg') }}"
+                            <img src="{{ isset($user->profile_photo_path) ? Storage::url($user->profile_photo_path) : 'no_image.webp' }}"
                                 alt="alternate text"
                                 class="rounded-xl border border-separator-light border-4 sw-11 sh-11" />
                             <button

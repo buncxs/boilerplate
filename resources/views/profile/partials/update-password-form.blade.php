@@ -30,7 +30,7 @@
 
                 <div class="mb-3 row mt-5">
                     <div class="col-sm-8 col-md-9 col-lg-10 ms-auto">
-                        <button type="submit" class="btn btn-outline-primary">Update</button>
+                        <button type="submit" class="btn btn-primary">Update</button>
                     </div>
                 </div>
             </form>

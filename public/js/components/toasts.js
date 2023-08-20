@@ -20,12 +20,12 @@ class ComponentsToasts {
         this._initToastPlacement();
     }
 
+    // My default toast
     _initToast() {
         const toastEl = document.getElementById("toast");
         if (toastEl) {
-            this._toast = new bootstrap.Toast(document.getElementById("toast"));
-            toastEl.className = `toast-container position-fixed p-3 bottom-0 end-0`;
-            this._toast.show();
+            this._toast = new bootstrap.Toast(toastEl);
+            this._toast && this._toast.show();
         }
     }
 

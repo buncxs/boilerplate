@@ -24,6 +24,7 @@
         <main>
             {{ $slot }}
         </main>
+        
         @include('layouts.footer')
     </div>
     @include('layouts.modal_settings')
